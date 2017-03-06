@@ -1,7 +1,7 @@
-Ionic 2 App Base
+NoticesApp Base
 =====================
 
-This is the base template for Ionic 2 starter apps.
+An app for reading notices and reports from an API endpoint
 
 ## Using this project
 
@@ -14,7 +14,7 @@ $ npm install -g ionic
 Then run:
 
 ```bash
-$ ionic start myApp
+$ ionic start NoticesApp
 ```
 
 More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/docs/v2/getting-started/) page.

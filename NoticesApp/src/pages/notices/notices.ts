@@ -48,9 +48,10 @@ export class NoticesPage {
     });
   }
 
-  viewNotice(notices){
+  viewNotice(week){
     this.navCtrl.push(NoticesDetailsPage,{
-      notices : notices
+    	notices : week.notices,
+		title 	: week.title
     })
   }
 

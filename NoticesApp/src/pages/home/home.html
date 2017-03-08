@@ -10,10 +10,10 @@
     <ion-card-content>
       <ion-grid>
         <ion-row wrap>
-          <ion-col width-90 style = "padding-left:10%;"><button ion-button full><ion-icon name="information-circle"></ion-icon>&nbsp;&nbsp;Notices</button></ion-col>
-          <ion-col width-90 style = "padding-left:10%;"><button ion-button full><ion-icon name="document"></ion-icon>&nbsp;&nbsp;Reports</button></ion-col>
-          <ion-col width-90 style = "padding-left:10%;"><button ion-button full><ion-icon name="document"></ion-icon>&nbsp;&nbsp;Sunday Reports</button></ion-col>
-          <ion-col width-90 style = "padding-left:10%;"><button ion-button full><ion-icon name="contacts"></ion-icon>&nbsp;&nbsp;Accounts</button></ion-col>
+          <ion-col width-90 style = "padding-left:10%;"><button ion-button full (click) = "goToPage('NoticesPage')"><ion-icon name="information-circle"></ion-icon>&nbsp;&nbsp;Notices</button></ion-col>
+          <ion-col width-90 style = "padding-left:10%;"><button ion-button full (click) = "goToPage('ReportsPage')"><ion-icon name="document"></ion-icon>&nbsp;&nbsp;Reports</button></ion-col>
+          <ion-col width-90 style = "padding-left:10%;"><button ion-button full (click) = "goToPage('SundayReportsPage')"><ion-icon name="document"></ion-icon>&nbsp;&nbsp;Sunday Reports</button></ion-col>
+          <ion-col width-90 style = "padding-left:10%;"><button ion-button full (click) = "goToPage('AccountsPage')"><ion-icon name="contacts"></ion-icon>&nbsp;&nbsp;Accounts</button></ion-col>
         </ion-row>
       </ion-grid>
       </ion-card-content>

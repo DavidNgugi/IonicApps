@@ -31,6 +31,16 @@ export class SundayReportsPage {
     this.getSundayReports();
   }
 
+  doRefresh(refresher){
+    setTimeout(() => {
+      this.sundayReportService.getSundayReports().subscribe(response => {
+        this.loader.dismissAll();
+        refresher.complete();
+        this.reports = response;
+      });
+    }, 2000);
+  }
+
   getSundayReports(){
     this.sundayReportService.getSundayReports().subscribe(response => {
       this.loader.dismissAll();

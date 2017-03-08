@@ -22,14 +22,24 @@ export class NoticesPage {
     this.loader = this.loadingCtrl.create({
       content: "Fetching notices..."
     });
-
-    this.loader.present();
+	
+	this.loader.present();
   }
 
   ngOnInit(){
-    this.getNotices();
+	this.getNotices();
   }
 
+  doRefresh(refresher){
+    setTimeout(() => {
+      this.noticeService.getNotices().subscribe(response => {
+        this.loader.dismissAll();
+        refresher.complete();
+        this.items = response;
+      });
+    }, 2000);
+  }
+  
   getNotices(){
     this.noticeService.getNotices().subscribe(response => {
       this.loader.dismissAll();

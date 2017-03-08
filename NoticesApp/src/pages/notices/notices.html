@@ -13,14 +13,22 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-refresher (ionRefresh) = "doRefresh($event)">
+    <ion-refresher-content 
+      pullingIcon = "refresh"
+      pullingText = "Pull to refresh"
+      refreshingSpinner = "circles"
+      refreshingText = "Fetching Notices...">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
-    <ion-item block *ngFor = "let item of items">
-      <a ion-button >{{ item.month }}</a>
-        <ion-list>
-          <ion-item *ngFor = "let week of item.weeks">
-            <a ion-button >{{ week.title }}</a>
-          </ion-item>
-        </ion-list>
-    </ion-item>
-  </ion-list>
+      <ion-item block *ngFor = "let item of items">
+        <a ion-button >{{ item.month }}</a>
+          <ion-list>
+            <ion-item *ngFor = "let week of item.weeks">
+              <a ion-button >{{ week.title }}</a>
+            </ion-item>
+          </ion-list>
+      </ion-item>
+    </ion-list>
 </ion-content>

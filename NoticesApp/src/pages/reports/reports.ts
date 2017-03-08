@@ -29,6 +29,16 @@ export class ReportsPage {
     this.getReports();
   }
 
+  doRefresh(refresher){
+    setTimeout(() => {
+      this.reportService.getReports().subscribe(response => {
+        this.loader.dismissAll();
+        refresher.complete();
+        this.reports = response;
+      });
+    }, 2000);
+  }
+
   getReports(){
     this.reportService.getReports().subscribe(response => {
       this.loader.dismissAll();

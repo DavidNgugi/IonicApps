@@ -13,6 +13,14 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-refresher (ionRefresh) = "doRefresh($event)">
+    <ion-refresher-content 
+      pullingIcon = "refresh"
+      pullingText = "Pull to refresh"
+      refreshingSpinner = "circles"
+      refreshingText = "Fetching Reports...">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
     <ion-item *ngFor = "let report of reports" >
       <ion-card padding >

@@ -15,7 +15,24 @@ export class HomePage {
     
   }
 
-
+  goToPage(pageName){
+    switch(pageName){
+      case 'NoticesPage':
+        this.navCtrl.setRoot(NoticesPage);
+        break;
+      case 'ReportsPage':
+        this.navCtrl.setRoot(ReportsPage);
+        break;
+      case 'SundayReportsPage':
+        this.navCtrl.setRoot(SundayReportsPage);
+        break;
+      case 'AccountsPage':
+        this.navCtrl.setRoot(AccountsPage);
+        break;
+      
+    }
+  }
+  
 
 
 }

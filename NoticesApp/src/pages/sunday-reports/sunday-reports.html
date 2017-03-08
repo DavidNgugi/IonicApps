@@ -7,13 +7,21 @@
 <ion-header>
 
   <ion-navbar color = "primary">
-    <ion-title>Sunday Reports</ion-title>
+    <ion-title>Sunday Summary Reports</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-refresher (ionRefresh) = "doRefresh($event)">
+    <ion-refresher-content 
+      pullingIcon = "refresh"
+      pullingText = "Pull to refresh"
+      refreshingSpinner = "circles"
+      refreshingText = "Fetching Sunday Summaries...">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
     <ion-item *ngFor = "let report of reports">
       <ion-card padding>
